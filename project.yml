@@ -1,0 +1,39 @@
+name: D6000Menu
+options:
+  bundleIdPrefix: com.hgmancholam
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+    ENABLE_HARDENED_RUNTIME: NO
+targets:
+  D6000Menu:
+    type: application
+    platform: macOS
+    sources: [D6000Menu]
+    info:
+      path: D6000Menu/Info.plist
+      properties:
+        CFBundleDisplayName: D6000 Menu
+        LSUIElement: true
+        NSHumanReadableCopyright: ""
+    settings:
+      base:
+        SWIFT_OBJC_BRIDGING_HEADER: D6000Menu/D6000Menu-Bridging-Header.h
+      configs:
+        Debug:
+          PRODUCT_BUNDLE_IDENTIFIER: com.hgmancholam.D6000Menu.debug
+    scheme:
+      testTargets: [D6000MenuTests]
+  D6000MenuTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources: [D6000MenuTests]
+    dependencies:
+      - target: D6000Menu
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES

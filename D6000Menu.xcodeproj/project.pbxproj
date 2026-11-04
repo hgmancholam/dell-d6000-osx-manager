@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A44ACC0A732BCC37A809492 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055D3ED731123EEF0323432 /* Models.swift */; };
+		2B87253E00CEFE41FAF31745 /* DockModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A79168AFF46AC1B531759 /* DockModelTests.swift */; };
+		5333715E32F30DA17CF7DF99 /* DockStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411DAA19804D4B8C1E07E889 /* DockStore.swift */; };
+		7992F3E6E950306DAAEF9B27 /* SystemWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40233267BA264EBF6BEC0B0E /* SystemWatcher.swift */; };
+		97B51C37C77BAA3C55E4D07F /* DockActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DF101C2D71A3968F415BA /* DockActions.swift */; };
+		9DD4C1B801F044A7EEA69FEF /* MenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BC4BA3ADD51EE821C08A /* MenuContentView.swift */; };
+		BF8DAFE083BCA6FECA3211EF /* LoginItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C9229737BC6FB493139957 /* LoginItem.swift */; };
+		C3B280F11C62572883DDF3B1 /* HardwareScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307DC6310DB379DFA920AADB /* HardwareScanner.swift */; };
+		D309BB01F2A03B4F87CCC647 /* D6000MenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076BE1471E52187CC87850A /* D6000MenuApp.swift */; };
+		E1B025380E7CE46DC639EDE8 /* USBReset.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD179266C0616FC7E73DC8B /* USBReset.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D8B3873704585B582BD7AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44707FAE5E80A58CB1B2BBE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED0679D43D6C67C1D22A5196;
+			remoteInfo = D6000Menu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		304321F061CB15B129DF7254 /* D6000MenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D6000MenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30734E3F5D7A3A5679E442D8 /* D6000Menu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "D6000Menu-Bridging-Header.h"; sourceTree = "<group>"; };
+		307DC6310DB379DFA920AADB /* HardwareScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareScanner.swift; sourceTree = "<group>"; };
+		40233267BA264EBF6BEC0B0E /* SystemWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemWatcher.swift; sourceTree = "<group>"; };
+		411DAA19804D4B8C1E07E889 /* DockStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockStore.swift; sourceTree = "<group>"; };
+		437DF101C2D71A3968F415BA /* DockActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockActions.swift; sourceTree = "<group>"; };
+		4A7A79168AFF46AC1B531759 /* DockModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockModelTests.swift; sourceTree = "<group>"; };
+		5AD179266C0616FC7E73DC8B /* USBReset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = USBReset.c; sourceTree = "<group>"; };
+		5EBD0CBEB55EB6BC14699E60 /* USBReset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USBReset.h; sourceTree = "<group>"; };
+		75B0BC4BA3ADD51EE821C08A /* MenuContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentView.swift; sourceTree = "<group>"; };
+		8055D3ED731123EEF0323432 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A729CB546826E3882A3DF26D /* D6000Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D6000Menu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D076BE1471E52187CC87850A /* D6000MenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D6000MenuApp.swift; sourceTree = "<group>"; };
+		D5C7EED3A8D143625A9D6ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E6C9229737BC6FB493139957 /* LoginItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		239C8334EE98E2B9BDB55931 = {
+			isa = PBXGroup;
+			children = (
+				F6E6DF3449F23F5C5AE3A028 /* D6000Menu */,
+				9630DB09A4A05BA3B0D08FDC /* D6000MenuTests */,
+				5E0BB0784C579E1FAC7F0CF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5E0BB0784C579E1FAC7F0CF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A729CB546826E3882A3DF26D /* D6000Menu.app */,
+				304321F061CB15B129DF7254 /* D6000MenuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9630DB09A4A05BA3B0D08FDC /* D6000MenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A7A79168AFF46AC1B531759 /* DockModelTests.swift */,
+			);
+			path = D6000MenuTests;
+			sourceTree = "<group>";
+		};
+		F6E6DF3449F23F5C5AE3A028 /* D6000Menu */ = {
+			isa = PBXGroup;
+			children = (
+				30734E3F5D7A3A5679E442D8 /* D6000Menu-Bridging-Header.h */,
+				D076BE1471E52187CC87850A /* D6000MenuApp.swift */,
+				437DF101C2D71A3968F415BA /* DockActions.swift */,
+				411DAA19804D4B8C1E07E889 /* DockStore.swift */,
+				307DC6310DB379DFA920AADB /* HardwareScanner.swift */,
+				D5C7EED3A8D143625A9D6ED2 /* Info.plist */,
+				E6C9229737BC6FB493139957 /* LoginItem.swift */,
+				75B0BC4BA3ADD51EE821C08A /* MenuContentView.swift */,
+				8055D3ED731123EEF0323432 /* Models.swift */,
+				40233267BA264EBF6BEC0B0E /* SystemWatcher.swift */,
+				5AD179266C0616FC7E73DC8B /* USBReset.c */,
+				5EBD0CBEB55EB6BC14699E60 /* USBReset.h */,
+			);
+			path = D6000Menu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD92F2CBD31302DD56391317 /* D6000MenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6556411C6F0E71C1BF7F548E /* Build configuration list for PBXNativeTarget "D6000MenuTests" */;
+			buildPhases = (
+				4593921A5F25A620FF3485C7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E4FD1A822EB085892418B44 /* PBXTargetDependency */,
+			);
+			name = D6000MenuTests;
+			packageProductDependencies = (
+			);
+			productName = D6000MenuTests;
+			productReference = 304321F061CB15B129DF7254 /* D6000MenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED0679D43D6C67C1D22A5196 /* D6000Menu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A662E75290EE0DF8ADACF06F /* Build configuration list for PBXNativeTarget "D6000Menu" */;
+			buildPhases = (
+				65E7C63E3AC6B7C425AAD6B4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = D6000Menu;
+			packageProductDependencies = (
+			);
+			productName = D6000Menu;
+			productReference = A729CB546826E3882A3DF26D /* D6000Menu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44707FAE5E80A58CB1B2BBE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CD92F2CBD31302DD56391317 = {
+						ProvisioningStyle = Manual;
+					};
+					ED0679D43D6C67C1D22A5196 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 8CE1267DFC50C1C02946F493 /* Build configuration list for PBXProject "D6000Menu" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 239C8334EE98E2B9BDB55931;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5E0BB0784C579E1FAC7F0CF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED0679D43D6C67C1D22A5196 /* D6000Menu */,
+				CD92F2CBD31302DD56391317 /* D6000MenuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4593921A5F25A620FF3485C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87253E00CEFE41FAF31745 /* DockModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7C63E3AC6B7C425AAD6B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D309BB01F2A03B4F87CCC647 /* D6000MenuApp.swift in Sources */,
+				97B51C37C77BAA3C55E4D07F /* DockActions.swift in Sources */,
+				5333715E32F30DA17CF7DF99 /* DockStore.swift in Sources */,
+				C3B280F11C62572883DDF3B1 /* HardwareScanner.swift in Sources */,
+				BF8DAFE083BCA6FECA3211EF /* LoginItem.swift in Sources */,
+				9DD4C1B801F044A7EEA69FEF /* MenuContentView.swift in Sources */,
+				1A44ACC0A732BCC37A809492 /* Models.swift in Sources */,
+				7992F3E6E950306DAAEF9B27 /* SystemWatcher.swift in Sources */,
+				E1B025380E7CE46DC639EDE8 /* USBReset.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E4FD1A822EB085892418B44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED0679D43D6C67C1D22A5196 /* D6000Menu */;
+			targetProxy = 6D8B3873704585B582BD7AE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		383B1E221A0048041AFA02D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7547FC3F3CA96781FE6094C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		819CA5D89637D4C74A80FA9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = D6000Menu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hgmancholam.D6000Menu.debug;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "D6000Menu/D6000Menu-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		8C2B1B82BBC228671C188EE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = D6000Menu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hgmancholam.D6000Menu;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "D6000Menu/D6000Menu-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		CC0A2D0BB13316D6F9486097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hgmancholam.D6000MenuTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/D6000Menu.app/Contents/MacOS/D6000Menu";
+			};
+			name = Release;
+		};
+		DF782A30AFB739E523A84733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hgmancholam.D6000MenuTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/D6000Menu.app/Contents/MacOS/D6000Menu";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6556411C6F0E71C1BF7F548E /* Build configuration list for PBXNativeTarget "D6000MenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF782A30AFB739E523A84733 /* Debug */,
+				CC0A2D0BB13316D6F9486097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8CE1267DFC50C1C02946F493 /* Build configuration list for PBXProject "D6000Menu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				383B1E221A0048041AFA02D3 /* Debug */,
+				7547FC3F3CA96781FE6094C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A662E75290EE0DF8ADACF06F /* Build configuration list for PBXNativeTarget "D6000Menu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				819CA5D89637D4C74A80FA9F /* Debug */,
+				8C2B1B82BBC228671C188EE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44707FAE5E80A58CB1B2BBE3 /* Project object */;
+}
