@@ -1,6 +1,7 @@
 name: D6000Manager
 options:
   bundleIdPrefix: com.hgmancholam
+  developmentLanguage: en
   deploymentTarget:
     macOS: "14.0"
 settings:
@@ -18,6 +19,8 @@ targets:
       path: D6000Manager/Info.plist
       properties:
         CFBundleDisplayName: D6000 Manager
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations: [en, es]
         LSUIElement: true
         NSHumanReadableCopyright: ""
     settings:

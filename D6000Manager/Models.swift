@@ -42,21 +42,21 @@ enum DockHealth: Equatable {
 
     var title: String {
         switch self {
-        case .dockNotDetected: "Dock no detectado"
-        case .agentNotInstalled: "DisplayLink Manager no está instalado"
-        case .agentNotRunning: "DisplayLink Manager está cerrado"
-        case .noMonitors: "Dock conectado, sin monitores"
-        case .healthy(let monitors): monitors == 1 ? "Dock listo, 1 monitor" : "Dock listo, \(monitors) monitores"
+        case .dockNotDetected: String(localized: "Dock not detected")
+        case .agentNotInstalled: String(localized: "DisplayLink Manager is not installed")
+        case .agentNotRunning: String(localized: "DisplayLink Manager is closed")
+        case .noMonitors: String(localized: "Dock connected, no monitors")
+        case .healthy(let monitors): monitors == 1 ? String(localized: "Dock ready, 1 monitor") : String(localized: "Dock ready, \(monitors) monitors")
         }
     }
 
     var detail: String {
         switch self {
-        case .dockNotDetected: "macOS no ve el dock por USB. Revisa el cable y la corriente del dock."
-        case .agentNotInstalled: "Sin este programa, los monitores del dock no pueden funcionar."
-        case .agentNotRunning: "Los monitores del dock necesitan este programa abierto. Pulsa Reiniciar DisplayLink."
-        case .noMonitors: "Prueba Reiniciar DisplayLink. Si sigue igual, usa Reiniciar USB del dock."
-        case .healthy: "Todo responde con normalidad."
+        case .dockNotDetected: String(localized: "macOS can't see the dock over USB. Check the cable and the dock's power.")
+        case .agentNotInstalled: String(localized: "The dock's monitors can't work without this program.")
+        case .agentNotRunning: String(localized: "The dock's monitors need this program open. Click Restart DisplayLink.")
+        case .noMonitors: String(localized: "Try Restart DisplayLink. If nothing changes, use Reset Dock USB.")
+        case .healthy: String(localized: "Everything is responding normally.")
         }
     }
 
@@ -94,16 +94,16 @@ struct DockSnapshot: Equatable {
         var events: [String] = []
         let oldUSB = Set(old.usbDevices)
         let newUSB = Set(usbDevices)
-        events += newUSB.subtracting(oldUSB).map { "Conectado: \($0.name)" }.sorted()
-        events += oldUSB.subtracting(newUSB).map { "Desconectado: \($0.name)" }.sorted()
+        events += newUSB.subtracting(oldUSB).map { String(localized: "Connected: \($0.name)") }.sorted()
+        events += oldUSB.subtracting(newUSB).map { String(localized: "Disconnected: \($0.name)") }.sorted()
 
         let oldDisplayIDs = Set(old.displays.map(\.id))
         let newDisplayIDs = Set(displays.map(\.id))
-        events += displays.filter { !oldDisplayIDs.contains($0.id) }.map { "Monitor añadido: \($0.name)" }
-        events += old.displays.filter { !newDisplayIDs.contains($0.id) }.map { "Monitor retirado: \($0.name)" }
+        events += displays.filter { !oldDisplayIDs.contains($0.id) }.map { String(localized: "Monitor added: \($0.name)") }
+        events += old.displays.filter { !newDisplayIDs.contains($0.id) }.map { String(localized: "Monitor removed: \($0.name)") }
 
         if agentRunning != old.agentRunning {
-            events.append(agentRunning ? "DisplayLink Manager abierto" : "DisplayLink Manager cerrado")
+            events.append(agentRunning ? String(localized: "DisplayLink Manager opened") : String(localized: "DisplayLink Manager closed"))
         }
         return events
     }

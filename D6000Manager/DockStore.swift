@@ -21,7 +21,7 @@ final class DockStore: ObservableObject {
         do {
             try LoginItem.enableOnFirstInstalledLaunch()
         } catch {
-            lastResult = "No se pudo activar el inicio automático: \(error.localizedDescription)"
+            lastResult = String(localized: "Could not enable automatic startup: \(error.localizedDescription)")
         }
         syncLoginItem()
         watcher = SystemWatcher { [weak self] in
@@ -51,7 +51,7 @@ final class DockStore: ObservableObject {
         opensAtLogin = status == .enabled
         logger.notice("loginItem status=\(status.rawValue)")
         if status == .requiresApproval {
-            lastResult = "Autoriza D6000 Manager en Ajustes del Sistema > General > Ítems de inicio."
+            lastResult = String(localized: "Authorize D6000 Manager in System Settings > General > Login Items.")
         }
     }
 
@@ -59,22 +59,22 @@ final class DockStore: ObservableObject {
         do {
             try LoginItem.set(enabled: enabled)
         } catch {
-            lastResult = "No se pudo cambiar el inicio automático: \(error.localizedDescription)"
+            lastResult = String(localized: "Could not change automatic startup: \(error.localizedDescription)")
         }
         syncLoginItem()
     }
 
     func restartDisplayLink() {
-        run("Reiniciando DisplayLink…") { await DockActions.restartDisplayLink() }
+        run(String(localized: "Restarting DisplayLink…")) { await DockActions.restartDisplayLink() }
     }
 
     func reconfigureDisplays() {
-        run("Reconfigurando monitores…") { DockActions.reconfigureDisplays() }
+        run(String(localized: "Reconfiguring monitors…")) { DockActions.reconfigureDisplays() }
     }
 
     func resetUSB() {
         let devices = snapshot.dockDevices
-        run("Reiniciando USB del dock…") { await DockActions.resetUSB(devices: devices) }
+        run(String(localized: "Resetting dock USB…")) { await DockActions.resetUSB(devices: devices) }
     }
 
     // A dock attach fires many USB notifications in a burst, so they collapse into one scan.

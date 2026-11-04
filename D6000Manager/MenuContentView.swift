@@ -59,27 +59,31 @@ struct MenuContentView: View {
     }
 
     private var displaysSection: some View {
-        section("Monitores") {
+        section("Monitors") {
             ForEach(snapshot.displays) { display in
                 row(
                     title: display.name,
-                    detail: "\(display.width) × \(display.height)\(display.isActive ? "" : ", inactivo")",
-                    badge: display.isBuiltin ? "Integrada" : "Externo"
+                    detail: display.isActive
+                        ? String(localized: "\(String(display.width)) × \(String(display.height))")
+                        : String(localized: "\(String(display.width)) × \(String(display.height)), inactive"),
+                    badge: display.isBuiltin ? String(localized: "Built-in") : String(localized: "External")
                 )
             }
         }
     }
 
     private var usbSection: some View {
-        section("Dispositivos USB") {
+        section("USB Devices") {
             if snapshot.usbDevices.isEmpty {
-                Text("macOS no informa dispositivos USB.").font(.callout).foregroundStyle(.secondary)
+                Text("macOS reports no USB devices.").font(.callout).foregroundStyle(.secondary)
             }
             ForEach(snapshot.usbDevices) { device in
                 row(
                     title: device.name,
                     detail: String(format: "%04X:%04X %@", device.vendorID, device.productID, device.vendor),
-                    badge: device.isDockDevice ? "Dock" : (snapshot.isBehindDock(device) ? "En el dock" : nil)
+                    badge: device.isDockDevice
+                        ? String(localized: "Dock")
+                        : (snapshot.isBehindDock(device) ? String(localized: "On the dock") : nil)
                 )
             }
         }
@@ -88,7 +92,7 @@ struct MenuContentView: View {
     @ViewBuilder
     private var eventsSection: some View {
         if !store.events.isEmpty {
-            section("Cambios recientes") {
+            section("Recent Changes") {
                 ForEach(store.events) { event in
                     HStack(alignment: .firstTextBaseline, spacing: 8) {
                         Text(event.date, style: .time).foregroundStyle(.secondary).monospacedDigit()
@@ -103,29 +107,29 @@ struct MenuContentView: View {
     private var actions: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
-                Button("Actualizar") { store.refreshNow() }
-                Button("Reiniciar DisplayLink") { store.restartDisplayLink() }
+                Button("Refresh") { store.refreshNow() }
+                Button("Restart DisplayLink") { store.restartDisplayLink() }
                     .keyboardShortcut(.defaultAction)
-                Button("Reaplicar modo") { store.reconfigureDisplays() }
+                Button("Reapply Mode") { store.reconfigureDisplays() }
                     .disabled(snapshot.externalDisplays.isEmpty)
-                    .help("Vuelve a aplicar la resolución actual a los monitores externos que macOS ya ve.")
+                    .help("Reapplies the current resolution to the external monitors macOS already sees.")
             }
             .controlSize(.small)
 
             if confirmingUSBReset {
-                Text("Se cerrará DisplayLink y se cortarán unos segundos los monitores, el audio y la red del dock. Expulsa antes los discos conectados a él.")
+                Text("DisplayLink will close, and the dock's monitors, audio and network will cut out for a few seconds. Eject any drives connected to it first.")
                     .font(.callout)
                     .fixedSize(horizontal: false, vertical: true)
                 HStack {
-                    Button("Reiniciar USB ahora", role: .destructive) {
+                    Button("Reset USB Now", role: .destructive) {
                         confirmingUSBReset = false
                         store.resetUSB()
                     }
-                    Button("Cancelar") { confirmingUSBReset = false }
+                    Button("Cancel") { confirmingUSBReset = false }
                 }
                 .controlSize(.small)
             } else {
-                Button("Reiniciar USB del dock…") { confirmingUSBReset = true }
+                Button("Reset Dock USB…") { confirmingUSBReset = true }
                     .controlSize(.small)
                     .disabled(snapshot.dockDevices.isEmpty)
             }
@@ -145,7 +149,7 @@ struct MenuContentView: View {
 
     private var footer: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Toggle("Abrir al iniciar sesión", isOn: Binding(
+            Toggle("Open at Login", isOn: Binding(
                 get: { store.opensAtLogin },
                 set: { store.setOpensAtLogin($0) }
             ))
@@ -158,17 +162,17 @@ struct MenuContentView: View {
 
     private var statusLine: some View {
         HStack {
-            Text("Última lectura: \(store.lastScan.formatted(date: .omitted, time: .standard))")
+            Text("Last read: \(store.lastScan.formatted(date: .omitted, time: .standard))")
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .monospacedDigit()
             Spacer()
-            Button("Salir") { NSApplication.shared.terminate(nil) }
+            Button("Quit") { NSApplication.shared.terminate(nil) }
                 .controlSize(.small)
         }
     }
 
-    private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
+    private func section<Content: View>(_ title: LocalizedStringKey, @ViewBuilder content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(title).font(.subheadline.weight(.semibold))
             content()

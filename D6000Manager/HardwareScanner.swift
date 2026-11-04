@@ -31,7 +31,7 @@ enum HardwareScanner {
             let productID: Int = property(service, "idProduct") ?? 0
             let name: String = property(service, "USB Product Name")
                 ?? property(service, "kUSBProductString")
-                ?? String(format: "Dispositivo %04X:%04X", vendorID, productID)
+                ?? String(format: String(localized: "Device %04X:%04X"), vendorID, productID)
             let vendor: String = property(service, "USB Vendor Name") ?? property(service, "kUSBVendorString") ?? ""
             let location: Int = property(service, "locationID") ?? 0
 
@@ -64,7 +64,7 @@ enum HardwareScanner {
             let isBuiltin = CGDisplayIsBuiltin(id) != 0
             return DisplayInfo(
                 id: id,
-                name: names[id] ?? (isBuiltin ? "Pantalla integrada" : "Monitor \(id)"),
+                name: names[id] ?? (isBuiltin ? String(localized: "Built-in display") : String(localized: "Monitor \(String(id))")),
                 isBuiltin: isBuiltin,
                 isActive: CGDisplayIsActive(id) != 0,
                 width: CGDisplayPixelsWide(id),

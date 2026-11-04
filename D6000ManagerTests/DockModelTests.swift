@@ -44,10 +44,10 @@ final class DockModelTests: XCTestCase {
         let after = DockSnapshot(usbDevices: [displayLink], displays: [monitor], agentInstalled: true, agentRunning: true)
 
         XCTAssertEqual(after.changes(since: before), [
-            "Conectado: Dell D6000",
-            "Desconectado: Teclado",
-            "Monitor añadido: U2720",
-            "DisplayLink Manager abierto",
+            String(localized: "Connected: \("Dell D6000")"),
+            String(localized: "Disconnected: \("Teclado")"),
+            String(localized: "Monitor added: \("U2720")"),
+            String(localized: "DisplayLink Manager opened"),
         ])
         XCTAssertEqual(after.changes(since: after), [])
     }

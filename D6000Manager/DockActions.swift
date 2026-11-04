@@ -13,19 +13,19 @@ enum DockActions {
             return openError
         }
         return serviceRestarted
-            ? "DisplayLink Manager y su servicio se reiniciaron."
-            : "DisplayLink Manager se abrió, pero su servicio no se pudo reiniciar."
+            ? String(localized: "DisplayLink Manager and its service were restarted.")
+            : String(localized: "DisplayLink Manager opened, but its service could not be restarted.")
     }
 
     static func reconfigureDisplays() -> String {
         let reapplied = reapplyExternalDisplayModes()
         return reapplied == 0
-            ? "No se pudo reaplicar el modo: macOS no aceptó el cambio o no ve monitores externos."
-            : "Modo reaplicado en \(reapplied) monitores externos."
+            ? String(localized: "Could not reapply the mode: macOS rejected the change or sees no external monitors.")
+            : String(localized: "Mode reapplied on \(reapplied) external monitors.")
     }
 
     static func resetUSB(devices: [USBDevice]) async -> String {
-        guard !devices.isEmpty else { return "No hay dispositivos del dock que reiniciar." }
+        guard !devices.isEmpty else { return String(localized: "There are no dock devices to reset.") }
 
         // DisplayLinkUserAgent holds the dock device exclusively, so it must exit before re-enumeration.
         await closeAgent()
@@ -45,9 +45,9 @@ enum DockActions {
         let openError = await openAgent()
 
         var parts: [String] = []
-        if !accepted.isEmpty { parts.append("Reinicio USB aceptado: \(accepted.joined(separator: ", ")).") }
-        if !failures.isEmpty { parts.append("Reinicio USB rechazado: \(failures.joined(separator: "; ")).") }
-        parts.append(openError ?? "DisplayLink Manager se volvió a abrir.")
+        if !accepted.isEmpty { parts.append(String(localized: "USB reset accepted: \(accepted.joined(separator: ", ")).")) }
+        if !failures.isEmpty { parts.append(String(localized: "USB reset rejected: \(failures.joined(separator: "; ")).")) }
+        parts.append(openError ?? String(localized: "DisplayLink Manager was reopened."))
         return parts.joined(separator: " ")
     }
 
@@ -71,7 +71,7 @@ enum DockActions {
 
     private static func openAgent() async -> String? {
         guard let appURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: HardwareScanner.agentBundleID) else {
-            return "DisplayLink Manager no está instalado."
+            return String(localized: "DisplayLink Manager is not installed.")
         }
         do {
             let configuration = NSWorkspace.OpenConfiguration()
@@ -79,7 +79,7 @@ enum DockActions {
             _ = try await NSWorkspace.shared.openApplication(at: appURL, configuration: configuration)
             return nil
         } catch {
-            return "No se pudo abrir DisplayLink Manager: \(error.localizedDescription)"
+            return String(localized: "Could not open DisplayLink Manager: \(error.localizedDescription)")
         }
     }
 
