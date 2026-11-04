@@ -1,8 +1,8 @@
-# D6000 Menu
+# D6000 Manager
 
 App de barra de menú para macOS que muestra el estado de un dock **Dell Universal Dock D6000** y permite recuperarlo cuando el Mac deja de reconocerlo a él o a sus monitores.
 
-El D6000 usa DisplayLink para sus monitores, así que en un Mac intervienen varias piezas: el cable, el dock, DisplayLink Manager y macOS. D6000 Menu indica cuál parece estar fallando y reúne en un solo lugar las acciones para reintentar.
+El D6000 usa DisplayLink para sus monitores, así que en un Mac intervienen varias piezas: el cable, el dock, DisplayLink Manager y macOS. D6000 Manager indica cuál parece estar fallando y reúne en un solo lugar las acciones para reintentar.
 
 <p>
   <img src="docs/screenshots/menu-ready.png" width="300" alt="Panel con el dock listo y dos monitores externos">
@@ -60,14 +60,14 @@ git clone https://github.com/hgmancholam/dell-d6000-osx-manager.git
 cd dell-d6000-osx-manager
 
 xcodebuild build \
-  -project D6000Menu.xcodeproj \
-  -scheme D6000Menu \
+  -project D6000Manager.xcodeproj \
+  -scheme D6000Manager \
   -configuration Release \
   -destination 'platform=macOS' \
   -derivedDataPath build
 
-ditto build/Build/Products/Release/D6000Menu.app /Applications/D6000Menu.app
-open /Applications/D6000Menu.app
+ditto "build/Build/Products/Release/D6000 Manager.app" "/Applications/D6000 Manager.app"
+open "/Applications/D6000 Manager.app"
 ```
 
 La primera vez que se abre desde `/Applications`, activa su inicio automático. Para cambiarlo, usa la casilla **Abrir al iniciar sesión** del menú. Si macOS pide autorización, ve a Ajustes del Sistema > General > Ítems de inicio.
@@ -76,7 +76,7 @@ Para actualizarla, cierra la app con **Salir** y repite los comandos.
 
 ## Configurar DisplayLink Manager
 
-Estos dos ajustes pertenecen a DisplayLink Manager, no a D6000 Menu, que no necesita permisos especiales:
+Estos dos ajustes pertenecen a DisplayLink Manager, no a D6000 Manager, que no necesita permisos especiales:
 
 1. **Grabación de pantalla:** actívala en Ajustes del Sistema > Privacidad y seguridad > Grabación de pantalla y audio del sistema. DisplayLink Manager la necesita para enviar la imagen a los monitores.
 2. **Inicio automático:** actívalo en Ajustes del Sistema > General > Ítems de inicio. Sin él, los monitores no funcionan hasta que abras el programa.
@@ -118,8 +118,8 @@ ioreg -r -c AppleHPMInterfaceType10 -w0 -l | grep -E 'Port-USB-C@|"ConnectionCou
 ## Desarrollo
 
 ```text
-D6000Menu/
-  D6000MenuApp.swift     Punto de entrada de la barra de menú
+D6000Manager/
+  D6000ManagerApp.swift     Punto de entrada de la barra de menú
   MenuContentView.swift  Interfaz del panel
   DockStore.swift        Estado de la app, actualización y acciones en curso
   Models.swift           Modelos, identificación del dock y cálculo del estado
@@ -128,14 +128,14 @@ D6000Menu/
   DockActions.swift      Reinicios de DisplayLink y USB, y reaplicar modo
   LoginItem.swift        Inicio automático
   USBReset.c             Reinicio de la conexión USB
-D6000MenuTests/          Pruebas unitarias
+D6000ManagerTests/          Pruebas unitarias
 project.yml              Definición del proyecto para XcodeGen
 ```
 
 Ejecutar las pruebas:
 
 ```sh
-xcodebuild test -project D6000Menu.xcodeproj -scheme D6000Menu -destination 'platform=macOS' -derivedDataPath build
+xcodebuild test -project D6000Manager.xcodeproj -scheme D6000Manager -destination 'platform=macOS' -derivedDataPath build
 ```
 
 El proyecto de Xcode se genera desde `project.yml`. Si añades archivos o cambias esa configuración, ejecuta `xcodegen generate` (requiere [XcodeGen](https://github.com/yonaskolb/XcodeGen)).

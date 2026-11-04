@@ -51,7 +51,7 @@ final class DockStore: ObservableObject {
         opensAtLogin = status == .enabled
         logger.notice("loginItem status=\(status.rawValue)")
         if status == .requiresApproval {
-            lastResult = "Autoriza D6000 Menu en Ajustes del Sistema > General > Ítems de inicio."
+            lastResult = "Autoriza D6000 Manager en Ajustes del Sistema > General > Ítems de inicio."
         }
     }
 

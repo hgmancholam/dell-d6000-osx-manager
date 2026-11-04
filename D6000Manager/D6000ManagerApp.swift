@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct D6000MenuApp: App {
+struct D6000ManagerApp: App {
     @StateObject private var store = DockStore()
 
     var body: some Scene {

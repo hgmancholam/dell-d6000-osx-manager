@@ -1,6 +1,6 @@
 import AppKit
 import XCTest
-@testable import D6000Menu
+@testable import D6000Manager
 
 final class DockModelTests: XCTestCase {
     private let displayLink = USBDevice(id: 1, vendorID: 0x17E9, productID: 0x6006, name: "Dell D6000", vendor: "DisplayLink", locationID: 0x0210_0000)

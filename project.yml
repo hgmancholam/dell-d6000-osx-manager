@@ -1,4 +1,4 @@
-name: D6000Menu
+name: D6000Manager
 options:
   bundleIdPrefix: com.hgmancholam
   deploymentTarget:
@@ -10,30 +10,37 @@ settings:
     CODE_SIGN_STYLE: Manual
     ENABLE_HARDENED_RUNTIME: NO
 targets:
-  D6000Menu:
+  D6000Manager:
     type: application
     platform: macOS
-    sources: [D6000Menu]
+    sources: [D6000Manager]
     info:
-      path: D6000Menu/Info.plist
+      path: D6000Manager/Info.plist
       properties:
-        CFBundleDisplayName: D6000 Menu
+        CFBundleDisplayName: D6000 Manager
         LSUIElement: true
         NSHumanReadableCopyright: ""
     settings:
       base:
-        SWIFT_OBJC_BRIDGING_HEADER: D6000Menu/D6000Menu-Bridging-Header.h
+        PRODUCT_NAME: D6000 Manager
+        PRODUCT_MODULE_NAME: D6000Manager
+        # Keeps the identifier from before the rename so the login item and settings stay attached to the app.
+        PRODUCT_BUNDLE_IDENTIFIER: com.hgmancholam.D6000Menu
+        SWIFT_OBJC_BRIDGING_HEADER: D6000Manager/D6000Manager-Bridging-Header.h
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
       configs:
         Debug:
           PRODUCT_BUNDLE_IDENTIFIER: com.hgmancholam.D6000Menu.debug
     scheme:
-      testTargets: [D6000MenuTests]
-  D6000MenuTests:
+      testTargets: [D6000ManagerTests]
+  D6000ManagerTests:
     type: bundle.unit-test
     platform: macOS
-    sources: [D6000MenuTests]
+    sources: [D6000ManagerTests]
     dependencies:
-      - target: D6000Menu
+      - target: D6000Manager
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/D6000 Manager.app/Contents/MacOS/D6000 Manager"
+        BUNDLE_LOADER: "$(TEST_HOST)"

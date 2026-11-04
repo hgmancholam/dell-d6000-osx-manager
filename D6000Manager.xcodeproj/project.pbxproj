@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		308B7021045BBFC35FE652D3 /* USBReset.c in Sources */ = {isa = PBXBuildFile; fileRef = EBDF348D9E986794C04DE762 /* USBReset.c */; };
+		3EDCE4B1BEC60FA8892F313C /* MenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155C3030D830A284B1D23EC /* MenuContentView.swift */; };
+		44FD4C0A68BDBA25586A86EC /* D6000ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA91A2E1933EB7A18690875 /* D6000ManagerApp.swift */; };
+		4DEB9CC9C88B88CFD22C555B /* DockActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0CD9DDA3E29957B6B7E39E /* DockActions.swift */; };
+		694B8778E0BA35034FF04837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1333715866586F258267E320 /* Assets.xcassets */; };
+		81AA73325D9134A5FE89A031 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02397BBAD01BA1C3E9365958 /* Models.swift */; };
+		917449B98EF82DC556CCAFB3 /* HardwareScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC905240164F464DC84E107 /* HardwareScanner.swift */; };
+		A250B635B36108331011F397 /* DockModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB65E190743CA3F10A7E37D /* DockModelTests.swift */; };
+		AEFDAE21B56ABEB17D843E2A /* DockStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306C553D7C64EB2E850792E /* DockStore.swift */; };
+		D040BF09B1A0401B2554D462 /* LoginItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F86CBE0B7C015D053C16B /* LoginItem.swift */; };
+		EE0F3E4A24158BC8EEA5FBD6 /* SystemWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270AF48121788F1C95BCD94 /* SystemWatcher.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F1593EC9F70A33930C96518 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B53457A6A4B620A39344CF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52779BD96087A8E24948D62F;
+			remoteInfo = D6000Manager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02397BBAD01BA1C3E9365958 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		0EA91A2E1933EB7A18690875 /* D6000ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D6000ManagerApp.swift; sourceTree = "<group>"; };
+		1155C3030D830A284B1D23EC /* MenuContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentView.swift; sourceTree = "<group>"; };
+		1306C553D7C64EB2E850792E /* DockStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockStore.swift; sourceTree = "<group>"; };
+		1333715866586F258267E320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A4D450D4EC97C2F4BA3B696 /* USBReset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USBReset.h; sourceTree = "<group>"; };
+		3AB7B88F9F450A512119AC57 /* D6000Manager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "D6000Manager-Bridging-Header.h"; sourceTree = "<group>"; };
+		3CB65E190743CA3F10A7E37D /* DockModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockModelTests.swift; sourceTree = "<group>"; };
+		5D0CD9DDA3E29957B6B7E39E /* DockActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockActions.swift; sourceTree = "<group>"; };
+		8270AF48121788F1C95BCD94 /* SystemWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemWatcher.swift; sourceTree = "<group>"; };
+		8FC905240164F464DC84E107 /* HardwareScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareScanner.swift; sourceTree = "<group>"; };
+		A0611A82CF3E2E90933F4D7E /* D6000ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D6000ManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C460A4CC825B0B72EF818631 /* D6000Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D6000Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2F86CBE0B7C015D053C16B /* LoginItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItem.swift; sourceTree = "<group>"; };
+		D380262D80A070F2A06814A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EBDF348D9E986794C04DE762 /* USBReset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = USBReset.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2F826F8E35E6765BEBE40B27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C460A4CC825B0B72EF818631 /* D6000Manager.app */,
+				A0611A82CF3E2E90933F4D7E /* D6000ManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		535048F2097AD23476EAF2BC /* D6000Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1333715866586F258267E320 /* Assets.xcassets */,
+				3AB7B88F9F450A512119AC57 /* D6000Manager-Bridging-Header.h */,
+				0EA91A2E1933EB7A18690875 /* D6000ManagerApp.swift */,
+				5D0CD9DDA3E29957B6B7E39E /* DockActions.swift */,
+				1306C553D7C64EB2E850792E /* DockStore.swift */,
+				8FC905240164F464DC84E107 /* HardwareScanner.swift */,
+				D380262D80A070F2A06814A6 /* Info.plist */,
+				CA2F86CBE0B7C015D053C16B /* LoginItem.swift */,
+				1155C3030D830A284B1D23EC /* MenuContentView.swift */,
+				02397BBAD01BA1C3E9365958 /* Models.swift */,
+				8270AF48121788F1C95BCD94 /* SystemWatcher.swift */,
+				EBDF348D9E986794C04DE762 /* USBReset.c */,
+				3A4D450D4EC97C2F4BA3B696 /* USBReset.h */,
+			);
+			path = D6000Manager;
+			sourceTree = "<group>";
+		};
+		81DCF9B71571535E7A793A70 = {
+			isa = PBXGroup;
+			children = (
+				535048F2097AD23476EAF2BC /* D6000Manager */,
+				9AB3183E0DA6938089569643 /* D6000ManagerTests */,
+				2F826F8E35E6765BEBE40B27 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9AB3183E0DA6938089569643 /* D6000ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3CB65E190743CA3F10A7E37D /* DockModelTests.swift */,
+			);
+			path = D6000ManagerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52779BD96087A8E24948D62F /* D6000Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52C5AACC4E12B25498CD4B26 /* Build configuration list for PBXNativeTarget "D6000Manager" */;
+			buildPhases = (
+				BAB8E6E36F727AF67D2578B1 /* Sources */,
+				BF7934AF33B5AA9AA9D6773F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = D6000Manager;
+			packageProductDependencies = (
+			);
+			productName = D6000Manager;
+			productReference = C460A4CC825B0B72EF818631 /* D6000Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC0E759EAEA58DE6E966BDD2 /* D6000ManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C494CD28808A41DFD6897826 /* Build configuration list for PBXNativeTarget "D6000ManagerTests" */;
+			buildPhases = (
+				438E3F1C55C20262E24F79A8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30BA9728C3C29EC734D0DDD1 /* PBXTargetDependency */,
+			);
+			name = D6000ManagerTests;
+			packageProductDependencies = (
+			);
+			productName = D6000ManagerTests;
+			productReference = A0611A82CF3E2E90933F4D7E /* D6000ManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B53457A6A4B620A39344CF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					52779BD96087A8E24948D62F = {
+						ProvisioningStyle = Manual;
+					};
+					AC0E759EAEA58DE6E966BDD2 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 5677DC697BF7D5FD1B73223C /* Build configuration list for PBXProject "D6000Manager" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 81DCF9B71571535E7A793A70;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2F826F8E35E6765BEBE40B27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52779BD96087A8E24948D62F /* D6000Manager */,
+				AC0E759EAEA58DE6E966BDD2 /* D6000ManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF7934AF33B5AA9AA9D6773F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				694B8778E0BA35034FF04837 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		438E3F1C55C20262E24F79A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A250B635B36108331011F397 /* DockModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB8E6E36F727AF67D2578B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44FD4C0A68BDBA25586A86EC /* D6000ManagerApp.swift in Sources */,
+				4DEB9CC9C88B88CFD22C555B /* DockActions.swift in Sources */,
+				AEFDAE21B56ABEB17D843E2A /* DockStore.swift in Sources */,
+				917449B98EF82DC556CCAFB3 /* HardwareScanner.swift in Sources */,
+				D040BF09B1A0401B2554D462 /* LoginItem.swift in Sources */,
+				3EDCE4B1BEC60FA8892F313C /* MenuContentView.swift in Sources */,
+				81AA73325D9134A5FE89A031 /* Models.swift in Sources */,
+				EE0F3E4A24158BC8EEA5FBD6 /* SystemWatcher.swift in Sources */,
+				308B7021045BBFC35FE652D3 /* USBReset.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30BA9728C3C29EC734D0DDD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52779BD96087A8E24948D62F /* D6000Manager */;
+			targetProxy = 0F1593EC9F70A33930C96518 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05E85F6227B179EE26C3B37C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0826B09912E215BFEC664A7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = D6000Manager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hgmancholam.D6000Menu.debug;
+				PRODUCT_MODULE_NAME = D6000Manager;
+				PRODUCT_NAME = "D6000 Manager";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "D6000Manager/D6000Manager-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		36558751E4396A03A4725077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		42BEE715703592458DA032F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = D6000Manager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hgmancholam.D6000Menu;
+				PRODUCT_MODULE_NAME = D6000Manager;
+				PRODUCT_NAME = "D6000 Manager";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "D6000Manager/D6000Manager-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		8FCAA31ADB30DED6E247903B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hgmancholam.D6000ManagerTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/D6000 Manager.app/Contents/MacOS/D6000 Manager";
+			};
+			name = Debug;
+		};
+		E63C224C5D6AD7058D08B731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hgmancholam.D6000ManagerTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/D6000 Manager.app/Contents/MacOS/D6000 Manager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52C5AACC4E12B25498CD4B26 /* Build configuration list for PBXNativeTarget "D6000Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0826B09912E215BFEC664A7B /* Debug */,
+				42BEE715703592458DA032F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5677DC697BF7D5FD1B73223C /* Build configuration list for PBXProject "D6000Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36558751E4396A03A4725077 /* Debug */,
+				05E85F6227B179EE26C3B37C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C494CD28808A41DFD6897826 /* Build configuration list for PBXNativeTarget "D6000ManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCAA31ADB30DED6E247903B /* Debug */,
+				E63C224C5D6AD7058D08B731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B53457A6A4B620A39344CF0 /* Project object */;
+}
